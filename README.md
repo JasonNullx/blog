@@ -1,2 +1,2 @@
-# This is my Blog
+# This is my blog
 http://jasonhack.me
