@@ -43,7 +43,27 @@ $ git diff file.txt
 # 没有add之前
 ```
 
-## 4.版本回退
+## 4.工作区和暂存区
+![](01-git/4.png)
+- Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。
+- git add后文件会放到暂存区，确认无误后commit提交到分支。
+
+## 5.撤销修改
+**第一种情况：修改了，但没有add到暂存区**
+```bash
+$ git checkout -- file.txt
+```
+
+**第二种情况：修改了，并且add到暂存区**
+```bash
+$ git reset HEAD file.txt
+# 这时暂存区已经清除
+$ git checkout -- file.txt
+# 丢弃工作区的修改
+```
+**第三种情况：commit提交了**
+见版本回退
+## 6.版本回退
 **查看版本日志：**
 ```bash
 $ git log
@@ -69,28 +89,6 @@ $ git reflog
 # 当你使用reset回退到了之前的版本，这时用git log已经看不到回退之前的版本了！
 # 而用git reflog查看命令历史就可以看到
 ```
-
-## 5.工作区和暂存区
-![](01-git/4.png)
-- Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。
-- git add后文件会放到暂存区，确认无误后commit提交到分支。
-
-## 6.撤销修改
-**第一种情况：修改了，但没有add到暂存区**
-```bash
-$ git checkout -- file.txt
-```
-
-**第二种情况：修改了，并且add到暂存区**
-```bash
-$ git reset HEAD file.txt
-# 这时暂存区已经清除
-$ git checkout -- file.txt
-# 丢弃工作区的修改
-```
-**第三种情况：commit提交了**
-见版本回退
-
 ## 7.删除文件
 ```bash
 $ rm file.txt
