@@ -5,7 +5,7 @@
 # Site
 title: "Jason's Blog"
 subtitle: Keep Going
-description: "Python|Linux|AI"
+description: "Python|Linux|AI|Cyber"
 author: Jason
 language: zh-Hans
 timezone: "Asia/Chongqing"
@@ -39,7 +39,7 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace:
 
