@@ -30,7 +30,7 @@ $ cd shell
 **将本地仓库和远程仓库关联起来：**
 ```bash
 $ git remote add origin https://github.com/JasonNullx/shell.git
-# 或如下方式
+# 或如下方式(一般用这个)
 $ git remote add origin git@github.com: JasonNullx/shell.git
 # origin为远程仓库的名字，这是git的默认叫法，可以改成别的，但建议不改！
 ```
@@ -72,6 +72,8 @@ $ git merge origin/master
 ```bash
 $ git pull
 # 相当于git fetch + git merge
+# 如果是第一次从远程仓库更新的话，就得按如下方式：
+$ git pull origin master
 ```
 
 ## 5.从远程仓库克隆到本地
