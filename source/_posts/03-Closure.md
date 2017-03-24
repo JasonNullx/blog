@@ -5,6 +5,7 @@ tags: [Python]
 ---
 ## 1.什么是闭包
 内部函数对外部函数作用域里变量的引用（非全局变量），则称内部函数为闭包。
+<!-- more -->
 ![](03-Closure/1.png)
 ```python
 def func(num1):
